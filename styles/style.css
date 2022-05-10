@@ -44,10 +44,6 @@ body {
 }
 
 /*~~~~~~~~~~*/
-/*! HERO
-/*~~~~~~~~~~*/
-
-/*~~~~~~~~~~*/
 /*! MAIN
 /*~~~~~~~~~~*/
 
@@ -174,6 +170,7 @@ body {
   .nav__item--register button {
     background: none;
     cursor: pointer;
+    border: 1px solid var(--almost-black);
     border-radius: 12px;
     padding: 0.5rem 1rem;
   }
