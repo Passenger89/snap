@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.svg"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Epilogue:wght@500;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="./styles/reset.css" />
+    <link rel="stylesheet" href="./styles/style.css" />
+
+    <title>Snap</title>
+  </head>
+  <body>
+    <header class="header">
+      <div class="container row">
+        <div class="logo"><img src="./images/logo.svg" alt="logo" /></div>
+        <button class="hamburger">
+          <img src="./images/icon-menu.svg" alt="mobile navigation button" />
+        </button>
+        <nav class="nav">
+          <!--! HIDDEN ON MOBILE DEVICES -->
+          <ul class="nav__list nav__list--primary row">
+            <li class="nav__item nav__item--features">Features</li>
+            <li class="nav__item nav__item--company">Company</li>
+            <li class="nav__item">Careers</li>
+            <li class="nav__item">About</li>
+          </ul>
+          <ul class="nav__list nav__list--secondary row">
+            <li class="nav__item">Login</li>
+            <li class="nav__item nav__item--register">
+              <button>Register</button>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <section class="hero container desktop-right">
+      <img id="hero-img" src="" alt="man on laptop" />
+    </section>
+
+    <main class="main">
+      <div class="container column">
+        <h1>Make remote work</h1>
+        <p>
+          Get your team in sync, no matter your location. Streamline processes,
+          create team rituals, and watch productivity soar.
+        </p>
+        <button>Learn more</button>
+      </div>
+    </main>
+    <footer class="footer">
+      <div class="container row">
+        <div class="container__item">
+          <img src="./images/client-databiz.svg" alt="company logo databiz" />
+        </div>
+        <div class="container__item">
+          <img
+            src="./images/client-audiophile.svg"
+            alt="company logo audiophile"
+          />
+        </div>
+        <div class="container__item">
+          <img src="./images/client-meet.svg" alt="company logo meet" />
+        </div>
+        <div class="container__item">
+          <img src="./images/client-maker.svg" alt="company logo maker" />
+        </div>
+      </div>
+    </footer>
+
+    <script src="./scripts/script.js"></script>
+  </body>
+</html>
