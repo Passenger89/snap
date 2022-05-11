@@ -25,21 +25,39 @@
   <body>
     <header class="header">
       <div class="container row">
-        <div class="logo"><img src="./images/logo.svg" alt="logo" /></div>
-        <button class="hamburger">
-          <img src="./images/icon-menu.svg" alt="mobile navigation button" />
-        </button>
-        <nav class="nav">
-          <!--! HIDDEN ON MOBILE DEVICES -->
-          <ul class="nav__list nav__list--primary row">
-            <li class="nav__item nav__item--features">Features</li>
-            <li class="nav__item nav__item--company">Company</li>
-            <li class="nav__item">Careers</li>
-            <li class="nav__item">About</li>
+        <div class="header__logo">
+          <img src="./images/logo.svg" alt="logo" />
+        </div>
+        <div class="header__burgerBtn">
+          <button id="btnHamburger"></button>
+        </div>
+        <div class="header__mobile-overlay"></div>
+        <nav class="header__nav--mobile">
+          <ul class="nav__list--mobile nav__list--primary-mobile row">
+            <li class="nav__item--mobile nav__item--features">Features</li>
+            <li class="nav__item--mobile nav__item--company">Company</li>
+            <li class="nav__item--mobile">Careers</li>
+            <li class="nav__item--mobile">About</li>
           </ul>
-          <ul class="nav__list nav__list--secondary row">
-            <li class="nav__item">Login</li>
-            <li class="nav__item nav__item--register">
+          <ul class="nav__list--mobile nav__list--secondary-mobile row">
+            <li class="nav__item--mobile">Login</li>
+            <li class="nav__item--mobile nav__item--register-mobile">
+              <button>Register</button>
+            </li>
+          </ul>
+        </nav>
+
+        <nav class="header__nav--desktop">
+          <!--! HIDDEN ON MOBILE DEVICES -->
+          <ul class="nav__list--desktop nav__list--primary-desktop row">
+            <li class="nav__item--desktop nav__item--features">Features</li>
+            <li class="nav__item--desktop nav__item--company">Company</li>
+            <li class="nav__item--desktop">Careers</li>
+            <li class="nav__item--desktop">About</li>
+          </ul>
+          <ul class="nav__list--desktop nav__list--secondary-desktop row">
+            <li class="nav__item--desktop">Login</li>
+            <li class="nav__item--desktop nav__item--register-desktop">
               <button>Register</button>
             </li>
           </ul>
