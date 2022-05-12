@@ -26,15 +26,43 @@ burgerBtn.addEventListener(
       overlay.classList.add('fade-in')
       mobileMenu.classList.remove('slide-right')
       mobileMenu.classList.add('slide-left')
+      noflow() //! Disables scrolling
     } else {
       //* Close hamburger menu
       overlay.classList.remove('fade-in')
       overlay.classList.add('fade-out')
       mobileMenu.classList.remove('slide-left')
       mobileMenu.classList.add('slide-right')
+      haveflow() //!Enables scrolling
     }
   },
   false
 )
 
 /* ------ */
+
+/* ----- TOGGLE MOBILE NAV DROPDOWN ----- */
+const features = document.querySelector('.nav__item--features')
+const company = document.querySelector('.nav__item--company')
+const featuresContent = document.querySelector('.features__list')
+const companyContent = document.querySelector('.company__list')
+
+features.addEventListener('click', () => {
+  featuresContent.classList.toggle('active')
+})
+company.addEventListener('click', () => {
+  companyContent.classList.toggle('active')
+})
+/* ----- */
+
+//! Utilities
+// (A) DISABLE SCROLL
+function noflow() {
+  document.body.style.overflow = 'hidden'
+  document.body.style.userSelect = 'none'
+}
+// (B) ENABLE SCROLL
+function haveflow() {
+  document.body.style.overflow = 'auto'
+  document.body.style.userSelect = 'auto'
+}

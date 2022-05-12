@@ -269,7 +269,7 @@ body {
   padding: 0.5rem 4rem;
 }
 
-@media (min-width: 600px) {
+@media (min-width: 700px) {
   body {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
@@ -361,4 +361,49 @@ body {
   .header__nav--mobile {
     display: none;
   }
+}
+
+.features__list:not(.active),
+.company__list:not(.active) {
+  display: none;
+  visibility: hidden;
+}
+
+.features__list,
+.company__list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.features__item::before {
+  content: '';
+  display: block;
+  height: 1.25rem;
+  width: 1rem;
+}
+
+.features__item,
+.company__item {
+  color: var(--medium-gray);
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.features__item:not(:last-child),
+.company__item:not(:last-child) {
+  margin-bottom: 1rem;
+}
+
+.features__item--todo {
+  background: left center no-repeat url('../images/icon-todo.svg');
+}
+.features__item--calendar {
+  background: left center no-repeat url('../images/icon-calendar.svg');
+}
+.features__item--reminders {
+  background: left center no-repeat url('../images/icon-reminders.svg');
+}
+.features__item--planning {
+  background: left center no-repeat url('../images/icon-planning.svg');
 }
