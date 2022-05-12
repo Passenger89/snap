@@ -67,8 +67,16 @@
         <nav class="header__nav--desktop">
           <!--! HIDDEN ON MOBILE DEVICES -->
           <ul class="nav__list--desktop nav__list--primary-desktop row">
-            <li class="nav__item--desktop nav__item--features">Features</li>
-            <li class="nav__item--desktop nav__item--company">Company</li>
+            <li
+              class="nav__item--desktop nav__item--features nav__item--features-desktop"
+            >
+              Features
+            </li>
+            <li
+              class="nav__item--desktop nav__item--company nav__item--company-desktop"
+            >
+              Company
+            </li>
             <li class="nav__item--desktop">Careers</li>
             <li class="nav__item--desktop">About</li>
           </ul>
@@ -78,6 +86,24 @@
               <button>Register</button>
             </li>
           </ul>
+          <div class="features__dropdown--desktop">
+            <ul class="features__list--desktop">
+              <li class="features__item features__item--todo">Todo List</li>
+              <li class="features__item features__item--calendar">Calendar</li>
+              <li class="features__item features__item--reminders">
+                Reminders
+              </li>
+              <li class="features__item features__item--planning">Planning</li>
+            </ul>
+          <div class="company__dropdown--desktop">
+            <ul class="company__list--desktop">
+              <li class="company__item company__item--todo">History</li>
+              <li class="company__item company__item--calendar">Our Team</li>
+              <li class="company__item company__item--reminders">
+                Blog
+              </li>
+            </ul>
+          </div>
         </nav>
       </div>
     </header>
@@ -93,7 +119,7 @@
           Get your team in sync, no matter your location. Streamline processes,
           create team rituals, and watch productivity soar.
         </p>
-        <button>Learn more</button>
+        <button class="cta-desktop">Learn more</button>
       </div>
     </main>
     <footer class="footer">

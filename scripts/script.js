@@ -66,3 +66,20 @@ function haveflow() {
   document.body.style.overflow = 'auto'
   document.body.style.userSelect = 'auto'
 }
+
+/* ----- HANDLE DESKTOP NAVIGATION ACTIVE STATES ----- */
+const featuresDesktop = document.querySelector('.nav__item--features-desktop')
+const featuresDropdown = document.querySelector('.features__dropdown--desktop')
+featuresDesktop.addEventListener('click', () => {
+  featuresDesktop.classList.toggle('active')
+  featuresDropdown.classList.toggle('active')
+})
+
+const companyDesktop = document.querySelector('.nav__item--company-desktop')
+const companyDropdown = document.querySelector('.company__dropdown--desktop')
+companyDesktop.addEventListener('click', () => {
+  companyDesktop.classList.toggle('active')
+  companyDropdown.classList.toggle('active')
+})
+
+/* ----- */

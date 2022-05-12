@@ -33,7 +33,7 @@ body {
 }
 
 /*~~~~~~~~~~*/
-/*!HAMBURGER
+/*!HAMBURGER BUTTON
 /*~~~~~~~~~~*/
 #btnHamburger {
   background: transparent;
@@ -72,7 +72,7 @@ body {
 }
 
 /*~~~~~~~~~~*/
-/*!HAMBURGER OPEN STYLES
+/*!HAMBURGER BUTTON OPEN STYLES
 /*~~~~~~~~~~*/
 
 .open #btnHamburger {
@@ -102,6 +102,51 @@ body {
   left: 0px;
   background-color: var(--almost-black);
   z-index: 98;
+}
+
+.features__list:not(.active),
+.company__list:not(.active) {
+  display: none;
+  visibility: hidden;
+}
+
+.features__list,
+.company__list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.features__item::before {
+  content: '';
+  display: block;
+  height: 1.25rem;
+  width: 1rem;
+}
+
+.features__item,
+.company__item {
+  color: var(--medium-gray);
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.features__item:not(:last-child),
+.company__item:not(:last-child) {
+  margin-bottom: 1rem;
+}
+
+.features__item--todo {
+  background: left center no-repeat url('../images/icon-todo.svg');
+}
+.features__item--calendar {
+  background: left center no-repeat url('../images/icon-calendar.svg');
+}
+.features__item--reminders {
+  background: left center no-repeat url('../images/icon-reminders.svg');
+}
+.features__item--planning {
+  background: left center no-repeat url('../images/icon-planning.svg');
 }
 
 /*~~~~~~~~~~*/
@@ -269,6 +314,10 @@ body {
   padding: 0.5rem 4rem;
 }
 
+/*~~~~~~~~~~*/
+/*! DESKTOP STYLES
+/*~~~~~~~~~~*/
+
 @media (min-width: 780px) {
   body {
     display: grid;
@@ -311,6 +360,7 @@ body {
   }
 
   .header__nav--desktop {
+    position: relative;
     display: flex;
     flex: 1;
     justify-content: space-between;
@@ -334,6 +384,11 @@ body {
     align-items: center;
     gap: 0.5rem;
     cursor: pointer;
+    color: var(--medium-gray);
+  }
+
+  .nav__item--desktop:hover {
+    color: var(--almost-black);
   }
 
   .nav__item--features::after,
@@ -345,12 +400,64 @@ body {
     display: inline-block;
   }
 
+  .nav__item--features.active::after,
+  .nav__item--company.active::after {
+    background-image: url('../images/icon-arrow-up.svg');
+  }
+
   .nav__item--register-desktop button {
     background: none;
     cursor: pointer;
-    border: 1px solid var(--almost-black);
+    border: 2px solid var(--medium-gray);
     border-radius: 12px;
     padding: 0.5rem 1rem;
+    color: var(--medium-gray);
+  }
+  .nav__item--register-desktop button:hover {
+    color: var(--almost-black);
+    outline: 1px solid var(--almost-black);
+  }
+
+  .cta-desktop:hover {
+    cursor: pointer;
+    background-color: transparent !important;
+    color: var(--almost-black) !important;
+    outline: 2px solid var(--almost-black);
+    font-weight: var(--fw-700);
+  }
+
+  .features__dropdown--desktop,
+  .company__dropdown--desktop {
+    display: none;
+    visibility: hidden;
+    position: absolute;
+    top: 4rem;
+    left: -1rem;
+    background-color: var(--almost-white);
+    min-width: 10rem;
+    border-radius: 1rem;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 101;
+    padding-inline: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .company__dropdown--desktop {
+    top: 0;
+    left: 12rem;
+  }
+  .features__dropdown--desktop.active,
+  .company__dropdown--desktop.active {
+    display: flex;
+    visibility: visible;
+  }
+
+  .features__list--desktop,
+  .company__list--desktop {
+    padding: 0;
   }
 
   /** Hides hamburger menu on Desktop */
@@ -360,49 +467,4 @@ body {
   .header__nav--mobile {
     display: none;
   }
-}
-
-.features__list:not(.active),
-.company__list:not(.active) {
-  display: none;
-  visibility: hidden;
-}
-
-.features__list,
-.company__list {
-  list-style-type: none;
-  padding: 0;
-}
-
-.features__item::before {
-  content: '';
-  display: block;
-  height: 1.25rem;
-  width: 1rem;
-}
-
-.features__item,
-.company__item {
-  color: var(--medium-gray);
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-}
-
-.features__item:not(:last-child),
-.company__item:not(:last-child) {
-  margin-bottom: 1rem;
-}
-
-.features__item--todo {
-  background: left center no-repeat url('../images/icon-todo.svg');
-}
-.features__item--calendar {
-  background: left center no-repeat url('../images/icon-calendar.svg');
-}
-.features__item--reminders {
-  background: left center no-repeat url('../images/icon-reminders.svg');
-}
-.features__item--planning {
-  background: left center no-repeat url('../images/icon-planning.svg');
 }
