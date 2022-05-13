@@ -1,3 +1,17 @@
+/** INDEX
+** 0. GLOBAL STYLES
+** 1. HEADER
+** 2. HAMBURGER BTN
+** 3. HAMBURGER BTN OPEN STYLES
+** 4. MOBILE NAV MENU
+** 5. OVERLAY/MENU ANIMATION
+** 6. MAIN
+** 7. FOOTER
+** 8. UTILITIES
+** 9. DESKTOP STYLES
+/**------
+
+/*~~~~ 0 ~~~~~*/
 :root {
   --almost-white: hsl(0, 0%, 98%);
   --medium-gray: hsl(0, 0%, 41%);
@@ -16,7 +30,7 @@ body {
   color: var(--almost-black);
 }
 
-/*~~~~~~~~~~*/
+/*~~~~ 1 ~~~~~*/
 /*! HEADER
 /*~~~~~~~~~~*/
 
@@ -32,8 +46,8 @@ body {
   flex-shrink: 0;
 }
 
-/*~~~~~~~~~~*/
-/*!HAMBURGER BUTTON
+/*~~~~ 2 ~~~~~*/
+/*! HAMBURGER BUTTON
 /*~~~~~~~~~~*/
 #btnHamburger {
   background: transparent;
@@ -71,8 +85,8 @@ body {
   transition: all 0.4s ease-in;
 }
 
-/*~~~~~~~~~~*/
-/*!HAMBURGER BUTTON OPEN STYLES
+/*~~~~ 3 ~~~~~*/
+/*! HAMBURGER BUTTON OPEN STYLES
 /*~~~~~~~~~~*/
 
 .open #btnHamburger {
@@ -89,7 +103,7 @@ body {
   bottom: 10px;
 }
 
-/*~~~~~~~~~~*/
+/*~~~~ 4 ~~~~~*/
 /*! MOBILE NAV MENU
 /*~~~~~~~~~~*/
 
@@ -155,7 +169,7 @@ body {
   background: left center no-repeat url('../images/icon-planning.svg');
 }
 
-/*~~~~~~~~~~*/
+/*~~~~ 5 ~~~~~*/
 /*! OVERLAY/MENU ANIMATION
 /*~~~~~~~~~~*/
 
@@ -215,7 +229,7 @@ body {
   min-height: 10vh;
 }
 
-/*~~~~~~~~~~*/
+/*~~~~ 6 ~~~~~*/
 /*! MAIN
 /*~~~~~~~~~~*/
 
@@ -235,7 +249,7 @@ body {
   padding: 0.75rem 1.5rem;
 }
 
-/*~~~~~~~~~~*/
+/*~~~~ 7 ~~~~~*/
 /*! FOOTER
 /*~~~~~~~~~~*/
 
@@ -244,7 +258,7 @@ body {
   gap: 1rem;
 }
 
-/*~~~~~~~~~~*/
+/*~~~~ 8 ~~~~~*/
 /*! UTILITIES
 /*~~~~~~~~~~*/
 
@@ -320,7 +334,7 @@ body {
   padding: 0.5rem 4rem;
 }
 
-/*~~~~~~~~~~*/
+/*~~~~ 9 ~~~~~*/
 /*! DESKTOP STYLES
 /*~~~~~~~~~~*/
 

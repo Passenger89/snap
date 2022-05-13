@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Make remote work. Get your team in sync, no matter your location.">
 
     <link
       rel="icon"
@@ -29,7 +30,7 @@
           <img src="./src/images/logo.svg" alt="logo" />
         </div>
         <div class="header__burgerBtn">
-          <button id="btnHamburger"></button>
+          <button type="button" id="btnHamburger" aria-label="toggle-menu" aria-haspopup="menu"></button>
         </div>
         <div class="header__mobile-overlay"></div>
         <nav class="header__nav--mobile">
@@ -142,6 +143,6 @@
       </div>
     </footer>
 
-    <script src="./src/scripts/index.js"></script>
+    <script src="./src/scripts/index.js" async></script>
   </body>
 </html>
